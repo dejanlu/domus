@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Domus Nekretnine`,
+    description: ``,
+    author: `Dejan Lukić`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,5 +30,36 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Nunito Sans`,
+            variants: ["200", `400`, `700`],
+          },
+          {
+            family: `Josefin Sans`,
+            variants: ["200", `400`, `700`],
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/containers/layout"),
+        },
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "markdowns",
+        path: `${__dirname}/src/markdowns/`,
+      },
+    },
   ],
 }
