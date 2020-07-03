@@ -1,0 +1,38 @@
+[
+  {
+    "id": "feat1",
+    "icon_name": "RiShieldStarLine",
+    "title": "Ut ultrices ultrices enim",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+  },
+  {
+    "id": "feat2",
+    "icon_name": "RiHomeHeartLine",
+    "title": "Curabitur sit amet mauris",
+    "text": " Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris."
+  },
+  {
+    "id": "feat3",
+    "icon_name": "RiMapPin2Line",
+    "title": "Vestibulum tincidunt malesuada tellus",
+    "text": "Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra."
+  },
+  {
+    "id": "feat4",
+    "icon_name": "RiZoomInLine",
+    "title": "Morbi lacinia molestie dui",
+    "text": "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam."
+  },
+  {
+    "id": "feat5",
+    "icon_name": "RiMoneyEuroCircleLine",
+    "title": "In scelerisque sem at dolor",
+    "text": "In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor."
+  },
+  {
+    "id": "feat6",
+    "icon_name": "RiBarChart2Line",
+    "title": " Quisque volutpat condimentum velit",
+    "text": "Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh."
+  }
+]

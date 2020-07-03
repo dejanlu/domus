@@ -1,9 +1,33 @@
 import React from "react";
+import {
+  RiHomeHeartLine,
+  RiMapPin2Line,
+  RiBarChart2Line,
+  RiZoomInLine,
+  RiMoneyEuroCircleLine,
+  RiShieldStarLine,
+} from "react-icons/ri";
+
+import Feature from "../components/feature";
+import data from "../content/features.json";
 
 const IndexFeatures = () => {
+  const icons = [
+    RiHomeHeartLine,
+    RiMapPin2Line,
+    RiBarChart2Line,
+    RiZoomInLine,
+    RiMoneyEuroCircleLine,
+    RiShieldStarLine,
+  ];
+
   return (
     <section className="features" data-testid="indexFeatures">
-      Features
+      {data.map((feature) => (
+        <Feature key={feature.id} title={feature.title} text={feature.text}>
+          {icons.filter((icon) => icon.name === feature.icon_name)[0]}
+        </Feature>
+      ))}
     </section>
   );
 };

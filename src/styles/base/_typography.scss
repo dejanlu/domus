@@ -1,0 +1,19 @@
+.heading {
+  font-family: $font-display;
+  font-weight: 400;
+  color: $color-grey-dark-1;
+}
+
+.heading--quaternary {
+  font-size: 1.7rem;
+}
+
+.heading--light {
+  color: $color-grey-light-1;
+}
+
+.paragraph {
+  font-family: $font-primary;
+  font-size: 1.5rem;
+  color: $color-grey-dark-1;
+}
