@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => {
-  return <footer role="region">Footer</footer>;
+  return <footer data-testid="footer">Footer</footer>;
 };
 
 export default Footer;

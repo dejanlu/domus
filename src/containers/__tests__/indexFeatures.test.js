@@ -1,8 +1,12 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
-import Header from "../header";
+import { render, cleanup } from "@testing-library/react";
+import IndexFeatures from "../indexFeatures";
 
-test("header component renders correctly", () => {
-  render(<Header />);
-  expect(screen.getByRole("region")).toBeInTheDocument;
+beforeEach(cleanup);
+
+describe("<IndexFeatures />", () => {
+  test("component renders correctly", () => {
+    const { getByTestId } = render(<IndexFeatures />);
+    expect(getByTestId("indexFeatures")).toBeTruthy();
+  });
 });

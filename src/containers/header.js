@@ -1,7 +1,7 @@
 import React from "react";
 
 const Header = () => (
-  <header role="region" className="header">
+  <header data-testid="header" className="header">
     Header
   </header>
 );

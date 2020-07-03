@@ -1,8 +1,12 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import Footer from "../footer";
 
-test("footer component renders correctly", () => {
-  render(<Footer />);
-  expect(screen.getByRole("region")).toBeInTheDocument;
+beforeEach(cleanup);
+
+describe("<Footer />", () => {
+  test("component renders correctly", () => {
+    const { getByTestId } = render(<Footer />);
+    expect(getByTestId("footer")).toBeTruthy();
+  });
 });

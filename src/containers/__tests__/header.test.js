@@ -1,8 +1,12 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import Header from "../header";
 
-test("header component renders correctly", () => {
-  render(<Header />);
-  expect(screen.getByRole("region")).toBeInTheDocument;
+beforeEach(cleanup);
+
+describe("<Header />", () => {
+  test("component renders correctly", () => {
+    const { getByTestId } = render(<Header />);
+    expect(getByTestId("header")).toBeTruthy();
+  });
 });
