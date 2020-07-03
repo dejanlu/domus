@@ -7,11 +7,11 @@ import Footer from "./footer";
 import "../styles/main.scss";
 
 const Layout = ({ children }) => (
-  <>
+  <div className="container">
     <Header />
-    <main className="content">{children}</main>
+    {children}
     <Footer />
-  </>
+  </div>
 );
 
 Layout.propTypes = {

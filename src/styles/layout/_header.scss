@@ -1,0 +1,5 @@
+.header {
+  background-color: $color-primary;
+  grid-column: header-start / header-end;
+  grid-row: 1 / -1;
+}

@@ -1,0 +1,36 @@
+.hero {
+  background-color: $color-secondary;
+  grid-column: full-start / col-end 6;
+}
+
+.message {
+  background-color: $color-secondary;
+  grid-column: col-end 6 / full-end;
+}
+
+.features {
+  background-color: sienna;
+  grid-column: center-start / center-end;
+}
+
+.story {
+  &__pictures {
+    background-color: gold;
+    grid-column: full-start / col-end 4;
+  }
+
+  &__content {
+    background-color: rosybrown;
+    grid-column: col-end 4 / full-end;
+  }
+}
+
+.homes {
+  background-color: turquoise;
+  grid-column: center-start / center-end;
+}
+
+.gallery {
+  background-color: papayawhip;
+  grid-column: full-start / full-end;
+}
