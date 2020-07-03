@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import Layout from "../containers/layout"
+import Layout from "../containers/layout";
 
 export const query = graphql`
   query($slug: String!) {
@@ -14,10 +14,10 @@ export const query = graphql`
       body
     }
   }
-`
+`;
 
 const Page = ({ data }) => {
-  const { title } = data.mdx.frontmatter
+  const { title } = data.mdx.frontmatter;
   return (
     <Layout>
       <div>
@@ -25,7 +25,7 @@ const Page = ({ data }) => {
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

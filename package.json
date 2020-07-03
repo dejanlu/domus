@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "domus",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Domu nekretnine web site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dejan Lukić",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.6",
     "@mdx-js/react": "^1.6.6",
@@ -29,12 +29,18 @@
     "react-intersection-observer": "^8.26.2"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.3",
+    "babel-jest": "^26.1.0",
+    "babel-preset-gatsby": "^0.5.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.1.0",
+    "prettier": "2.0.5",
+    "react-test-renderer": "^16.13.1"
   },
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -42,13 +48,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/dejanlu/domus"
   }
 }
