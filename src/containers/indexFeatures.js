@@ -9,9 +9,11 @@ import {
 } from "react-icons/ri";
 
 import Feature from "../components/feature";
-import data from "../content/features.json";
+import { getContent } from "../content";
 
 const IndexFeatures = () => {
+  const data = getContent("features");
+
   const icons = [
     RiHomeHeartLine,
     RiMapPin2Line,
