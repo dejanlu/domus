@@ -1,7 +1,9 @@
 import features from "./features.json";
 
-const content = {
+const allContent = {
   features,
 };
 
-export const getContent = (name) => content[name];
+const content = { getContent: (name) => allContent[name] };
+
+export default content;
