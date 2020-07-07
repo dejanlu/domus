@@ -4,6 +4,13 @@
   color: $color-grey-dark-1;
 }
 
+.heading--tertiary {
+  font-size: 3.2rem;
+  font-style: italic;
+
+  line-height: 1.2;
+}
+
 .heading--quaternary {
   font-size: 1.7rem;
 }
@@ -12,8 +19,24 @@
   color: $color-grey-light-1;
 }
 
+.heading--color-primary {
+  color: $color-primary;
+}
+
+.heading--color-primary-dark {
+  color: $color-primary-dark;
+}
+
+.heading--color-secondary {
+  color: $color-secondary;
+}
+
 .paragraph {
   font-family: $font-primary;
   font-size: 1.5rem;
   color: $color-grey-dark-1;
+}
+
+.paragraph--color-primary {
+  color: $color-primary;
 }

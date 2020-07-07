@@ -21,13 +21,49 @@
 
 .story {
   &__pictures {
-    background-color: gold;
+    background-color: green;
     grid-column: full-start / col-end 4;
+
+    position: relative;
+
+    & .story__image-background {
+      height: 100%;
+      width: 100%;
+    }
+
+    & .story__image-family {
+      height: 50%;
+      width: 65%;
+
+      position: absolute !important;
+      top: 8%;
+      left: 10%;
+
+      border: solid $color-primary-dark 1rem;
+    }
+
+    & .story__image-indoor {
+      height: 50%;
+      width: 65%;
+
+      position: absolute !important;
+      top: 43%;
+      left: 42%;
+
+      border: solid $color-primary 1rem;
+    }
   }
 
   &__content {
-    background-color: rosybrown;
     grid-column: col-end 4 / full-end;
+
+    background-color: $color-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 6rem 8vw;
   }
 }
 
