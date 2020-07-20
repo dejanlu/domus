@@ -1,0 +1,67 @@
+[
+  {
+    "id": "001",
+    "naslov": "Nov trosoban stan",
+    "preporuka": true,
+    "tip": "stan",
+    "adresa": "Neka adresa 01",
+    "grad": "Banja Luka",
+    "godina": 2020,
+    "kvadratura": 72,
+    "sobe": 3,
+    "sprat": 1,
+    "cijena": 81000
+  },
+  {
+    "id": "002",
+    "naslov": "Prostran dvosoban stan",
+    "preporuka": true,
+    "tip": "stan",
+    "adresa": "Neka adresa 01",
+    "grad": "Banja Luka",
+    "godina": 2020,
+    "kvadratura": 54,
+    "sobe": 2,
+    "sprat": 3,
+    "cijena": 52000
+  },
+  {
+    "id": "003",
+    "naslov": "Praktičan dvosoban stan",
+    "preporuka": true,
+    "tip": "stan",
+    "adresa": "Neka adresa 01",
+    "grad": "Banja Luka",
+    "godina": 2020,
+    "kvadratura": 40,
+    "sobe": 1,
+    "sprat": 8,
+    "cijena": 54000
+  },
+  {
+    "id": "004",
+    "naslov": "Porodični trosoban stan",
+    "preporuka": false,
+    "tip": "stan",
+    "adresa": "Neka adresa 01",
+    "grad": "Banja Luka",
+    "godina": 2020,
+    "kvadratura": 74,
+    "sobe": 3,
+    "sprat": 3,
+    "cijena": 70000
+  },
+  {
+    "id": "005",
+    "naslov": "Predivan pogled",
+    "preporuka": false,
+    "tip": "stan",
+    "adresa": "Neka adresa 01",
+    "grad": "Banja Luka",
+    "godina": 2020,
+    "kvadratura": 121,
+    "sobe": 4,
+    "sprat": 6,
+    "cijena": 120000
+  }
+]

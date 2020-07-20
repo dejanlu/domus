@@ -27,7 +27,6 @@ const IndexStoryPictures = () => {
   `);
 
   const images = [...data.allFile.nodes];
-  console.log(getAppropriateImage("background", images));
 
   return (
     <section data-testid="indexStoryPictures" className="story__pictures">
