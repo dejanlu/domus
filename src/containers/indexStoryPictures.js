@@ -2,13 +2,30 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
 
-const getAppropriateImage = (name, images) => {
-  const imageNode = images.filter((image) =>
-    image.childImageSharp.fluid.originalName.includes(name)
-  )[0];
-  const { fluid } = imageNode.childImageSharp;
-  return fluid;
-};
+import { getImageBasedOnName } from "../helpers";
+
+export const PureIndexStoryPictures = ({ images }) => (
+  <section data-testid="indexStoryPictures" className="story__pictures">
+    <Image
+      fluid={getImageBasedOnName("background", images)}
+      className="story__image-background"
+      objectFit="fill"
+      objectPosition="50% 50%"
+    />
+
+    <Image
+      fluid={getImageBasedOnName("family", images)}
+      className="story__image-family"
+      objectFit="cover"
+    />
+
+    <Image
+      fluid={getImageBasedOnName("indoor", images)}
+      className="story__image-indoor"
+      objectFit="cover"
+    />
+  </section>
+);
 
 const IndexStoryPictures = () => {
   const data = useStaticQuery(graphql`
@@ -26,30 +43,7 @@ const IndexStoryPictures = () => {
     }
   `);
 
-  const images = [...data.allFile.nodes];
-
-  return (
-    <section data-testid="indexStoryPictures" className="story__pictures">
-      <Image
-        fluid={getAppropriateImage("background", images)}
-        className="story__image-background"
-        objectFit="fill"
-        objectPosition="50% 50%"
-      />
-
-      <Image
-        fluid={getAppropriateImage("family", images)}
-        className="story__image-family"
-        objectFit="cover"
-      />
-
-      <Image
-        fluid={getAppropriateImage("indoor", images)}
-        className="story__image-indoor"
-        objectFit="cover"
-      />
-    </section>
-  );
+  return <PureIndexStoryPictures images={data.allFile.nodes} />;
 };
 
 export default IndexStoryPictures;
