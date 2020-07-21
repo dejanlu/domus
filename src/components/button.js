@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Button = ({ children, handleClick, classesArray }) => {
   let classes;
@@ -13,6 +14,12 @@ const Button = ({ children, handleClick, classesArray }) => {
       {children}
     </button>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  classesArray: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Button;
