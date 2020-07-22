@@ -11,7 +11,7 @@ import {
 
 import Button from "./button";
 
-const PureCard = ({
+export const PureCard = ({
   id,
   godina,
   kvadratura,

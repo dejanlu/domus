@@ -10,7 +10,11 @@ const Button = ({ children, handleClick, classesArray }) => {
         : "";
   }
   return (
-    <button className={`button ${classes}`} onClick={() => handleClick()}>
+    <button
+      className={`button ${classes}`}
+      data-testid="button"
+      onClick={() => handleClick()}
+    >
       {children}
     </button>
   );
