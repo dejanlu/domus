@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
-import IndexGallery from "../indexGallery";
+import { PureIndexGallery as IndexGallery } from "../indexGallery";
 
 beforeEach(cleanup);
 
