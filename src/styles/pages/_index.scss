@@ -21,7 +21,6 @@
 
 .story {
   &__pictures {
-    background-color: green;
     grid-column: full-start / col-end 4;
 
     position: relative;
@@ -78,7 +77,9 @@
   grid-gap: 6rem;
 }
 
-.gallery {
-  background-color: papayawhip;
+.gallery-section {
   grid-column: full-start / full-end;
+
+  padding: 15rem 2rem;
+  background-color: $color-light;
 }

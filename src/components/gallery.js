@@ -1,8 +1,21 @@
 import React from "react";
 import Img from "gatsby-image";
 
-const Gallery = (images) => {
-  return <div>gallery</div>;
+const renderImages = (image) => (
+  <Img
+    fluid={image}
+    key={image.originalName}
+    className={image.originalName.substring(0, image.originalName.indexOf("."))}
+  />
+);
+
+const Gallery = ({ images }) => {
+  console.log(images);
+  return (
+    <div className="gallery">
+      {images.map((image) => renderImages(image.childImageSharp.fluid))}
+    </div>
+  );
 };
 
 export default Gallery;

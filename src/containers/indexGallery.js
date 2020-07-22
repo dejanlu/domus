@@ -3,8 +3,8 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import Gallery from "../components/gallery";
 
-const PureIndexGallery = ({ images }) => (
-  <section data-testid="indexGallery" className="gallery">
+export const PureIndexGallery = ({ images }) => (
+  <section data-testid="indexGallery" className="gallery-section">
     <Gallery images={images} />
   </section>
 );
