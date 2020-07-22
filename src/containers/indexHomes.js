@@ -13,10 +13,13 @@ export const PureIndexHomes = ({ images }) => {
 
   useEffect(() => setFilters({ preporuka: true }), []);
 
+  const objects = [...filteredObjects];
+  if (objects.length > 3) objects.slice(objects.length - 3, objects.length);
+
   return (
     <section data-testid="indexHomes" className="homes">
-      {filteredObjects.length > 0
-        ? filteredObjects.map((obj) => <Card key={obj.id} {...obj} />)
+      {objects.length > 0
+        ? objects.map((obj) => <Card key={obj.id} {...obj} />)
         : null}
     </section>
   );

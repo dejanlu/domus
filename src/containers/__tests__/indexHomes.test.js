@@ -6,7 +6,7 @@ import indexHomesUseStaticQuery from "../../../__mocks__/indexHomesUseStaticQuer
 import { useStaticQuery } from "gatsby";
 
 beforeEach(() => {
-  cleanup;
+  cleanup();
   useStaticQuery.mockImplementation(() => ({
     allFile: {
       edges: [
@@ -21,10 +21,17 @@ beforeEach(() => {
 });
 
 describe("<IndexHomes />", () => {
-  test("component renders correctly", () => {
+  it("should component renders correctly", () => {
     const { getByTestId } = render(
       <IndexHomes images={indexHomesUseStaticQuery} />
     );
     expect(getByTestId("indexHomes")).toBeTruthy();
+  });
+
+  it("should render child components", () => {
+    const { getAllByTestId } = render(
+      <IndexHomes images={indexHomesUseStaticQuery} />
+    );
+    expect(getAllByTestId("card").length).toEqual(3);
   });
 });

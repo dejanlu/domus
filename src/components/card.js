@@ -21,6 +21,7 @@ const PureCard = ({
   backgroundImageURL,
 }) => (
   <article
+    data-testid="card"
     className="card"
     style={{ backgroundImage: `url(${backgroundImageURL})` }}
   >
