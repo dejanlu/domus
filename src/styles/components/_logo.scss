@@ -1,0 +1,38 @@
+.logo {
+  font-family: $font-display;
+  color: $color-light;
+
+  & p {
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+
+    &::before {
+      content: "⧋";
+      position: absolute;
+      font-weight: 100;
+      top: -225px;
+      left: -5px;
+      font-size: 18.6rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 26.8rem;
+      background-color: $color-light;
+      left: 0;
+      top: 57px;
+    }
+  }
+
+  & span {
+    display: inline-block;
+    font-size: 1.7rem;
+    letter-spacing: 4px;
+    margin-left: 15.2rem;
+    transform: translateY(-17px);
+  }
+}

@@ -10,7 +10,6 @@ const renderImages = (image) => (
 );
 
 const Gallery = ({ images }) => {
-  console.log(images);
   return (
     <div className="gallery">
       {images.map((image) => renderImages(image.childImageSharp.fluid))}
