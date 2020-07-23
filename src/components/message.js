@@ -6,7 +6,7 @@ const Message = ({ message, author }) => {
       <span className="message__quotes message__quotes--open">“</span>
       <p className="paragraph heading--light">{message}</p>
       <span className="message__quotes message__quotes--close">”</span>
-      <p className="paragraph heading--light message__author">- {author}</p>
+      <p className="paragraph heading--light message__author"> - {author}</p>
     </article>
   );
 };
