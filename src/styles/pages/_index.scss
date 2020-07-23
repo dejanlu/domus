@@ -32,6 +32,19 @@
   display: grid;
   justify-content: center;
   align-items: center;
+
+  & .slick-slider {
+    overflow: show;
+    width: 22vw;
+  }
+
+  & .slick-dots li button::before {
+    color: $color-light;
+  }
+
+  & .slick-dots li.slick-active button::before {
+    color: #fff;
+  }
 }
 
 .features {

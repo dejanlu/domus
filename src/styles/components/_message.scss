@@ -1,6 +1,8 @@
 .message {
   position: relative;
 
+  padding: 1rem;
+
   p {
     position: relative;
     z-index: 2;
@@ -14,13 +16,13 @@
     z-index: 1;
 
     &--open {
-      top: -22rem;
-      left: -3.5rem;
+      top: -17rem;
+      left: -1rem;
     }
 
     &--close {
-      top: 1rem;
-      right: -2rem;
+      top: -4rem;
+      right: 0;
     }
   }
 
