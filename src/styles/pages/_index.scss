@@ -24,9 +24,14 @@
   }
 }
 
-.message {
+.hero-messages {
   background-color: $color-secondary;
   grid-column: col-end 6 / full-end;
+  padding: 5rem;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .features {

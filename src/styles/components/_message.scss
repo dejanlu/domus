@@ -1,0 +1,30 @@
+.message {
+  position: relative;
+
+  p {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__quotes {
+    font-size: 40rem;
+    position: absolute;
+    color: darken($color-secondary, 10);
+
+    z-index: 1;
+
+    &--open {
+      top: -22rem;
+      left: -3.5rem;
+    }
+
+    &--close {
+      top: 1rem;
+      right: -2rem;
+    }
+  }
+
+  &__author {
+    margin-top: 1.5rem;
+  }
+}
