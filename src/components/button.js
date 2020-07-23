@@ -11,7 +11,7 @@ const Button = ({ children, handleClick, classesArray }) => {
   }
   return (
     <button
-      className={`button ${classes}`}
+      className={`button ${classes.join(" ")}`}
       data-testid="button"
       onClick={() => handleClick()}
     >
