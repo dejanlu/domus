@@ -4,8 +4,18 @@ import BackgroundImage from "gatsby-background-image";
 
 import Logo from "../components/logo";
 
+export const PureIndexHero = ({ image }) => (
+  <section className="hero" data-testid="indexHero">
+    <BackgroundImage Tag={"figure"} fluid={image.imageSharp.fluid}>
+      <div className="hero__overlay">
+        <Logo />
+      </div>
+    </BackgroundImage>
+  </section>
+);
+
 const IndexHero = () => {
-  const data = useStaticQuery(graphql`
+  const image = useStaticQuery(graphql`
     query {
       imageSharp(fluid: { originalName: { regex: "/^hero.*/" } }) {
         fluid {
@@ -15,17 +25,7 @@ const IndexHero = () => {
     }
   `);
 
-  console.log(data.imageSharp.fluid);
-
-  return (
-    <section className="hero" data-testid="indexHero">
-      <BackgroundImage Tag={"figure"} fluid={data.imageSharp.fluid}>
-        <div className="hero__overlay">
-          <Logo />
-        </div>
-      </BackgroundImage>
-    </section>
-  );
+  return <PureIndexHero image={image} />;
 };
 
 export default IndexHero;
