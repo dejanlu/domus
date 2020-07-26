@@ -6,8 +6,8 @@ import Footer from "./footer";
 
 import "../styles/main.scss";
 
-const Layout = ({ children }) => (
-  <div className="container">
+const Layout = ({ children, className }) => (
+  <div className={className}>
     <Header />
     {children}
     <Footer />

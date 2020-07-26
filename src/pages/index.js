@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../containers/layout";
 import SEO from "../containers/seo";
 
-import IndexHero from "../containers/indexHero";
+import Hero from "../components/hero";
 import IndexMessage from "../containers/indexMessage";
 import IndexFeatures from "../containers/indexFeatures";
 import IndexStoryPictures from "../containers/indexStoryPictures";
@@ -20,9 +20,9 @@ import IndexGallery from "../containers/indexGallery";
 // gallery
 
 const IndexPage = () => (
-  <Layout>
+  <Layout className="container--index">
     <SEO title="Home" />
-    <IndexHero />
+    <Hero imageName="index" />
     <IndexMessage />
     <IndexFeatures />
     <IndexStoryPictures />
