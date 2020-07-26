@@ -1,8 +1,5 @@
-import React, { Children } from "react";
-import { render, cleanup, fireEvent } from "@testing-library/react";
-
-import gatsby from "../../../__mocks__/gatsby";
-import { Link } from "gatsby";
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
 
 import NavigationItem from "../navigationItem";
 
@@ -14,7 +11,7 @@ const componentProps = {
 };
 
 describe("<NavigationItem />", () => {
-  it("should render component with children", () => {
+  it("should render component with children and appropriate link", () => {
     const { getByTestId, getByText } = render(
       <NavigationItem {...componentProps}>{"childrenMock"}</NavigationItem>
     );

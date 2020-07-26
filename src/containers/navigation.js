@@ -42,7 +42,7 @@ const menuButtonVariants = {
 
 const Navigation = ({ isOpen, setOpen }) => {
   return (
-    <div>
+    <div data-testid="navigation">
       <motion.nav
         className={`navigation`}
         variants={navigationVariants}
@@ -52,6 +52,7 @@ const Navigation = ({ isOpen, setOpen }) => {
           variants={menuButtonVariants}
           className="navigation__menu-button"
           onClick={() => setOpen(!isOpen)}
+          data-testid="menuButton"
         >
           <RiArrowLeftRightLine />
         </motion.figure>
