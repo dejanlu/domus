@@ -1,5 +1,5 @@
 import React from "react";
-import { render, cleanup, screen } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import IndexFeatures from "../indexFeatures";
 import content from "../../content";
 
