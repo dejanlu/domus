@@ -4,8 +4,8 @@ import BackgroundImage from "gatsby-background-image";
 
 import Logo from "../components/logo";
 
-export const PureHero = ({ image }) => (
-  <section className="hero" data-testid="hero">
+export const PureHero = ({ image, className }) => (
+  <section className={`hero ${className}`} data-testid="hero">
     <BackgroundImage Tag={"figure"} fluid={image.childImageSharp.fluid}>
       <div className="hero__overlay">
         <Logo />
@@ -14,7 +14,7 @@ export const PureHero = ({ image }) => (
   </section>
 );
 
-const Hero = ({ imageName }) => {
+const Hero = ({ imageName, className }) => {
   const images = useStaticQuery(graphql`
     query {
       allFile(filter: { relativePath: { regex: "/^hero-*/" } }) {
@@ -34,7 +34,7 @@ const Hero = ({ imageName }) => {
     image.childImageSharp.fluid.originalName.includes(imageName)
   );
 
-  return <PureHero image={image[0]} />;
+  return <PureHero image={image[0]} className={className} />;
 };
 
 export default Hero;

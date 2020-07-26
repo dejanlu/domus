@@ -31,7 +31,7 @@ const IndexPage = () => (
   <Layout className="container--index">
     <SEO title="Home" />
 
-    <Hero imageName="index" />
+    <Hero imageName="index" className="hero--index" />
     <Slider
       sliderConfig={sliderConfig}
       className="hero-messages"
