@@ -17,3 +17,54 @@
     }
   }
 }
+
+.timeline {
+  grid-column: full-start / full-end;
+  background-color: $color-light;
+  border-top: solid 4px #fff;
+  border-bottom: solid 4px #fff;
+
+  padding: 15rem 0;
+
+  position: relative;
+
+  & .vertical-timeline-element-date {
+    color: $color-secondary;
+    font-size: 1.5rem !important;
+  }
+
+  & .vertical-timeline-element-title {
+    font-size: 1.5rem;
+    font-family: $font-display;
+  }
+
+  &__paragraph {
+    font-size: 1.5rem !important;
+  }
+
+  &::after {
+    content: "";
+    width: 4px;
+    height: 16rem;
+    background-color: white;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 16rem;
+    background-color: white;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 1;
+  }
+}

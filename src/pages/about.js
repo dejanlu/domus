@@ -4,6 +4,7 @@ import Layout from "../containers/layout";
 import SEO from "../containers/seo";
 
 import Hero from "../components/hero";
+import Timeline from "../components/timeline";
 
 import content from "../content";
 
@@ -20,6 +21,8 @@ const AboutPage = () => (
       </h1>
       <p className="paragraph heading--light">{data.hero.text}</p>
     </article>
+
+    <Timeline articles={data.timeline} />
   </Layout>
 );
 
