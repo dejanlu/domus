@@ -84,7 +84,7 @@
 }
 
 .homes {
-  background-color: #fff;
+  background-color: $color-light;
   grid-column: center-start / center-end;
 
   margin: 15rem 0;
@@ -98,5 +98,5 @@
   grid-column: full-start / full-end;
 
   padding: 15rem 2rem;
-  background-color: $color-light;
+  background-color: #fff;
 }

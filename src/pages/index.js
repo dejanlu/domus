@@ -6,8 +6,12 @@ import SEO from "../containers/seo";
 import Hero from "../components/hero";
 import IndexStoryPictures from "../containers/indexStoryPictures";
 import IndexStoryContent from "../containers/indexStoryContent";
-import IndexHomes from "../containers/indexHomes";
 import IndexGallery from "../containers/indexGallery";
+
+import CardsSectionWrapper from "../components/cardsSectionWrapper";
+import CardWrapper from "../components/cardWrapper";
+import HomeCard from "../components/homeCard";
+import useHomeRecommendedCards from "../hooks/useHomeRecommendedCards";
 
 // slider
 import Slider from "../components/slider";
@@ -49,9 +53,15 @@ const IndexPage = () => (
     <IndexStoryPictures />
     <IndexStoryContent />
 
-    <IndexHomes />
-
     <IndexGallery />
+
+    <CardsSectionWrapper>
+      {useHomeRecommendedCards().map((home) => (
+        <CardWrapper className="card" key={`wrapper${home.id}`}>
+          <HomeCard key={home.id} {...home} />
+        </CardWrapper>
+      ))}
+    </CardsSectionWrapper>
   </Layout>
 );
 
