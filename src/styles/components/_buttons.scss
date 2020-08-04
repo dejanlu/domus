@@ -25,9 +25,37 @@
   padding: 1.8rem 3rem;
   background-color: transparent;
 
+  &--light {
+    border: 1px solid $color-light;
+    color: $color-light;
+  }
+
   &:hover {
     border: 1px solid $color-secondary;
     color: $color-secondary;
     background-color: lighten($color: $color-light, $amount: 2%);
+  }
+
+  &--light:hover {
+    border: 1px solid $color-primary;
+    color: $color-primary;
+  }
+}
+
+.button--tertiary {
+  border: none;
+  padding: 1rem 0.5rem;
+  text-transform: none;
+  background-color: transparent;
+  font-weight: 700;
+  color: rgba($color-dark, 0.5);
+  transition: 0.2s;
+
+  border-bottom: 1px solid transparent;
+
+  &:active,
+  &:hover {
+    border-bottom: 1px solid $color-primary;
+    color: $color-primary;
   }
 }

@@ -10,6 +10,7 @@ import {
 } from "react-icons/ri";
 
 import Button from "./button";
+import useBackground from "../hooks/useBackground";
 
 export const PureCard = ({
   id,
@@ -68,20 +69,20 @@ export const PureCard = ({
 );
 
 const Card = (props) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { name: { regex: "/^cardBckg*/" } }) {
-        edges {
-          node {
-            publicURL
-          }
-        }
-      }
-    }
-  `);
-  const { publicURL } = data.allFile.edges[0].node;
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allFile(filter: { name: { regex: "/^cardBckg*/" } }) {
+  //       edges {
+  //         node {
+  //           publicURL
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+  // const { publicURL } = data.allFile.edges[0].node;
 
-  return <PureCard backgroundImageURL={publicURL} {...props} />;
+  return <PureCard backgroundImageURL={useBackground()} {...props} />;
 };
 
 Card.propTypes = {

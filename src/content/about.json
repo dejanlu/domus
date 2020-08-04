@@ -29,5 +29,35 @@
       "text": "Nunc fringilla, nunc in mattis. Mauris mollis risus sit amet. Quisque venenatis gravida dapibus dui. Sed ornare, dolor in rhoncus. Ut hendrerit mollis felis, sed.",
       "datum": "Danas"
     }
-  }
+  },
+  "vizija": {
+    "naslov": "Naša vizija, zadovoljan prodavac, zadovoljan kupac",
+    "text": "Orci feugiat, vel sodales vivamus. Egestas aliquam eros mauris elit dapibus, placerat sed aliquet donec, sed sed. Netus erat tortor neque porta, quisque lorem pede quis nam, est amet elit class diam curae habitasse, arcu blandit dolor et donec ut eu. Mi sapien vitae, accumsan nibh dui tellus vitae. Consequat tincidunt, dui dictum blandit, vel in pretium aliquet libero convallis, nibh est massa. Nunc nunc gravida, nunc amet pede erat curabitur proin. Sapien urna mi adipiscing massa quisque at, pretium purus. Turpis enim nulla. Arcu eu rhoncus pede, sed aenean morbi ullamcorper dolor mauris eleifend, nam aliquet sodales, ac vel habitasse justo fringilla vestibulum, vitae arcu nec. Lorem at nunc occaecat felis, a in illo pede vestibulum in et, turpis arcu porttitor velit vitae convallis."
+  },
+  "agenti": [
+    {
+      "ime": "Marko Marković",
+      "email": "marko.markovic@domus.rs",
+      "tel": "+3868787878",
+      "photo": "marko-markovic"
+    },
+    {
+      "ime": "Nenad Nenadić",
+      "email": "nenad.nenadic@domus.rs",
+      "tel": "+3868787878",
+      "photo": "nenad-nenadic"
+    },
+    {
+      "ime": "Ana Anić",
+      "email": "ana.anic@domus.rs",
+      "tel": "+3868787878",
+      "photo": "ana-anic"
+    },
+    {
+      "ime": "Petar Petrović",
+      "email": "petar.petrovic@domus.rs",
+      "tel": "+3868787878",
+      "photo": "petar-petrovic"
+    }
+  ]
 }

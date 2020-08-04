@@ -1,0 +1,10 @@
+.cardsSectionWrapper {
+  grid-column: center-start / center-end;
+
+  margin: 15rem 0;
+  background-color: $color-light;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}

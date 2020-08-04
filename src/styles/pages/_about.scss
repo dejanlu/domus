@@ -68,3 +68,39 @@
     z-index: 1;
   }
 }
+
+.container--about {
+  .article {
+    grid-column: full-start / full-end;
+    padding: 15rem 5rem;
+
+    color: $color-light;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    &__heading {
+      grid-column: 2 / 4;
+
+      position: relative;
+
+      h2 {
+        margin-bottom: 5rem;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 16rem;
+        background-color: $color-light;
+        left: -6.4rem;
+        top: 3rem;
+      }
+    }
+
+    &__content {
+      grid-column: 5 / 7;
+    }
+  }
+}

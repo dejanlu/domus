@@ -13,11 +13,13 @@
 .container--about {
   display: grid;
 
-  grid-template-rows: 60vh min-content auto 40vw repeat(3, min-content);
+  grid-template-rows: 60vh min-content auto repeat(2, min-content);
   grid-template-columns:
     [header-start] 8rem [header-end full-start] 1fr [center-start] repeat(
       8,
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end] 1fr [full-end];
+
+  background-color: $color-light;
 }
