@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
+import PropTypes from "prop-types";
 
 import Logo from "../components/logo";
 
@@ -35,6 +36,11 @@ const Hero = ({ imageName, className }) => {
   );
 
   return <PureHero image={image[0]} className={className} />;
+};
+
+Hero.propTypes = {
+  imageName: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default Hero;

@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
 
-const useBackground = () => {
+export const useBackground = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { name: { regex: "/^svgBckg*/" } }) {
@@ -15,5 +15,3 @@ const useBackground = () => {
 
   return data.allFile.edges[0].node.publicURL;
 };
-
-export default useBackground;

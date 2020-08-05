@@ -10,18 +10,9 @@ import {
 } from "react-icons/ri";
 
 import Button from "./button";
-import useBackground from "../hooks/useBackground";
+import { useBackground } from "../hooks/useBackground";
 
-const HomeCard = ({
-  id,
-  godina,
-  kvadratura,
-  sobe,
-  cijena,
-  images,
-  naslov,
-  backgroundImageURL,
-}) => (
+const HomeCard = ({ id, godina, kvadratura, sobe, cijena, images, naslov }) => (
   <>
     {images.length > 0 ? (
       <Img fluid={images[0].childImageSharp.fluid} className="card__image" />
@@ -70,5 +61,14 @@ const HomeCard = ({
     </div>
   </>
 );
+
+HomeCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  godina: PropTypes.number.isRequired,
+  kvadratura: PropTypes.number.isRequired,
+  sobe: PropTypes.number.isRequired,
+  cijena: PropTypes.number.isRequired,
+  images: PropTypes.arrayOf(PropTypes.object),
+};
 
 export default HomeCard;

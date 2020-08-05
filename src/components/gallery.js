@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
+import PropTypes from "prop-types";
 
 const renderImages = (image) => {
   const imageName = image.originalName.substring(
@@ -10,9 +11,10 @@ const renderImages = (image) => {
     <Img
       fluid={image}
       key={image.originalName}
-      className={imageName}
       alt={`Gallery image ${imageName}`}
       role="img"
+      Tag="div"
+      className={imageName}
     />
   );
 };
@@ -23,6 +25,10 @@ const Gallery = ({ images }) => {
       {images.map((image) => renderImages(image.childImageSharp.fluid))}
     </div>
   );
+};
+
+Gallery.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Gallery;

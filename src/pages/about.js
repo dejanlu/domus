@@ -4,7 +4,7 @@ import { navigate } from "gatsby";
 import Layout from "../containers/layout";
 import SEO from "../containers/seo";
 
-import useBackground from "../hooks/useBackground";
+import { useBackground } from "../hooks/useBackground";
 import useAgentsCards from "../hooks/useAgentsCards";
 
 import Hero from "../components/hero";

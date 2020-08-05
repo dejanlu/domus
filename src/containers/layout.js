@@ -16,6 +16,7 @@ const Layout = ({ children, className }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default Layout;

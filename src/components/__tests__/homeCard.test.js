@@ -1,12 +1,18 @@
 import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 
-import { PureCard as Card } from "../card";
 import gatsby from "../../../__mocks__/gatsby";
 import { navigate } from "gatsby";
 
+const useBackground = jest.fn();
+useBackground.mockReturnValueOnce(true).mockReturnValueOnce(false);
+
+import HomeCard from "../homeCard";
+import * as getBckgImageHook from "../../hooks/useBackground";
+
 const componentProps = {
   id: "001",
+  naslov: "dummy title",
   godina: 2020,
   kvadratura: 432,
   sobe: 1234,
@@ -27,25 +33,27 @@ const componentProps = {
       },
     },
   ],
-  backgroundImageURL: "testurl",
 };
 
 afterEach(cleanup);
 
-describe("<Card />", () => {
+describe("<HomeCard />", () => {
   it("should render component", () => {
-    const { getByTestId, getByText } = render(<Card {...componentProps} />);
+    getBckgImageHook.useBackground = jest.fn();
 
-    expect(getByTestId("card")).toBeTruthy();
+    const { getByText } = render(<HomeCard {...componentProps} />);
+
+    expect(getByText("dummy title")).toBeInTheDocument();
     expect(getByText("2020")).toBeInTheDocument();
     expect(getByText("432m²")).toBeInTheDocument();
     expect(getByText("1234 SOBE")).toBeInTheDocument();
     expect(getByText("50000")).toBeInTheDocument();
+    expect(getBckgImageHook.useBackground).toHaveBeenCalled();
   });
 
   it("should call navigate function with id argument", () => {
     jest.mock(gatsby);
-    const { getByTestId } = render(<Card {...componentProps} />);
+    const { getByTestId } = render(<HomeCard {...componentProps} />);
     fireEvent.click(getByTestId("button"));
     expect(navigate).toBeCalledWith("/001");
   });

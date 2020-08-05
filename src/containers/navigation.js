@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 import {
   RiArrowLeftRightLine,
   RiHome2Line,
@@ -75,6 +76,11 @@ const Navigation = ({ isOpen, setOpen }) => {
       </motion.nav>
     </div>
   );
+};
+
+Navigation.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
 };
 
 export default Navigation;

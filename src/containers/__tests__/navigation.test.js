@@ -1,5 +1,5 @@
 import React from "react";
-import { render, cleanup, getByText, fireEvent } from "@testing-library/react";
+import { render, cleanup, fireEvent } from "@testing-library/react";
 
 import Navigation from "../navigation";
 

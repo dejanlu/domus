@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -80,6 +81,10 @@ const Timeline = ({ articles }) => {
       </VerticalTimeline>
     </div>
   );
+};
+
+Timeline.propTypes = {
+  articles: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default Timeline;

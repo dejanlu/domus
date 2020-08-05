@@ -1,7 +1,9 @@
 import React from "react";
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, fireEvent } from "@testing-library/react";
 
 import NavigationItem from "../navigationItem";
+import gatsby from "../../../__mocks__/gatsby";
+import { Link } from "gatsby";
 
 beforeEach(cleanup);
 

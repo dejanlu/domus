@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import PropTypes from "prop-types";
 
 const inViewVariants = {
   shown: { y: 0, opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -19,10 +20,16 @@ const CardWrapper = ({ children, className }) => {
       animate={inView ? "shown" : "hidden"}
       variants={inViewVariants}
       className={`card1 ${className}`}
+      data-testid="cardWrapper"
     >
       {children}
     </motion.article>
   );
+};
+
+CardWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default CardWrapper;

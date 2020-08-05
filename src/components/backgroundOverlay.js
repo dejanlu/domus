@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 import useLockBodyScroll from "../hooks/useLockBodyScroll";
 
@@ -40,6 +41,11 @@ const BackgroundOverlay = ({ isOpen, setOpen }) => {
       data-testid="backgroundOverlay"
     ></motion.div>
   );
+};
+
+BackgroundOverlay.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
 };
 
 export default BackgroundOverlay;

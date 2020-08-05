@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Img from "gatsby-image";
+import PropTypes from "prop-types";
 
 import { motion } from "framer-motion";
 
@@ -123,6 +124,13 @@ const AgentCard = ({ ime, email, tel, image }) => {
       </div>
     </>
   );
+};
+
+AgentCard.propTypes = {
+  ime: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  tel: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
 };
 
 export default AgentCard;

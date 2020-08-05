@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 const textVariants = {
   onOpen: {
@@ -45,5 +46,11 @@ const NavigationItem = ({ link, children, text }) => (
     </Link>
   </motion.div>
 );
+
+NavigationItem.propTypes = {
+  children: PropTypes.node.isRequired,
+  link: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default NavigationItem;
