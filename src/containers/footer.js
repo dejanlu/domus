@@ -8,6 +8,7 @@ const Footer = () => {
         <Link to="/">Početna</Link>
         <Link to="/about">O nama</Link>
         <Link to="/offer">Ponuda objekata</Link>
+        <Link to="/legal">Pravne informacije</Link>
         <Link to="/blog">Naš blog</Link>
       </nav>
       <p className="footer__cop paragraph heading--light">

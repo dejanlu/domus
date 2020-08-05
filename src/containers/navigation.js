@@ -6,6 +6,7 @@ import {
   RiHome2Line,
   RiUser2Line,
   RiGitRepositoryLine,
+  RiBankLine,
   RiBallPenLine,
 } from "react-icons/ri";
 
@@ -68,6 +69,10 @@ const Navigation = ({ isOpen, setOpen }) => {
 
         <NavigationItem link="/offer" text="Ponuda objekata">
           <RiGitRepositoryLine />
+        </NavigationItem>
+
+        <NavigationItem link="/legal" text="Pravne informacije">
+          <RiBankLine />
         </NavigationItem>
 
         <NavigationItem link="/blog" text="Naš blog">

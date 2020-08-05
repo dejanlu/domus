@@ -3,6 +3,7 @@ import objekti from "./objekti.json";
 import poruke from "./poruke.json";
 import about from "./about.json";
 import offer from "./offer.json";
+import legal from "./legal.json";
 import blog from "./blog.json";
 
 const allContent = {
@@ -11,6 +12,7 @@ const allContent = {
   poruke,
   about,
   offer,
+  legal,
   blog,
 };
 
