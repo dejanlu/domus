@@ -8,6 +8,7 @@ import { useBackground } from "../hooks/useBackground";
 import useAgentsCards from "../hooks/useAgentsCards";
 
 import Hero from "../components/hero";
+import HeroMessage from "../components/heroMessage";
 import Timeline from "../components/timeline";
 import Button from "../components/button";
 import CardsSectionWrapper from "../components/cardsSectionWrapper";
@@ -21,14 +22,9 @@ const data = content.getContent("about");
 const AboutPage = () => (
   <Layout className="container--about">
     <SEO title="Domus nekretnine - o nama" />
-    <Hero imageName="about" className="hero--about" />
 
-    <article className="hero--about__content">
-      <h1 className="heading heading--tertiary heading--light">
-        {data.hero.naslov}
-      </h1>
-      <p className="paragraph heading--light">{data.hero.text}</p>
-    </article>
+    <Hero imageName="about" className="hero--about" />
+    <HeroMessage naslov={data.hero.naslov} text={data.hero.text} />
 
     <Timeline articles={data.timeline} />
 
