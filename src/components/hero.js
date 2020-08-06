@@ -15,7 +15,7 @@ export const PureHero = ({ image, className }) => (
   </section>
 );
 
-const Hero = ({ imageName, className }) => {
+const Hero = ({ imageName, className, passedImage = null }) => {
   const images = useStaticQuery(graphql`
     query {
       allFile(filter: { relativePath: { regex: "/^hero-*/" } }) {
@@ -31,11 +31,13 @@ const Hero = ({ imageName, className }) => {
     }
   `);
 
-  const image = images.allFile.nodes.filter((image) =>
-    image.childImageSharp.fluid.originalName.includes(imageName)
-  );
+  const image =
+    passedImage ||
+    images.allFile.nodes.filter((image) =>
+      image.childImageSharp.fluid.originalName.includes(imageName)
+    )[0];
 
-  return <PureHero image={image[0]} className={className} />;
+  return <PureHero image={image} className={className} />;
 };
 
 Hero.propTypes = {

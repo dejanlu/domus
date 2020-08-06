@@ -1,0 +1,20 @@
+.contactData {
+  display: flex;
+  flex-direction: column;
+
+  & p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.3rem;
+    margin-left: 0.4rem;
+  }
+
+  & span {
+    margin-left: 1rem;
+  }
+
+  & svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}

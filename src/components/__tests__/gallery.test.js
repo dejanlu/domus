@@ -3,6 +3,8 @@ import { render, cleanup } from "@testing-library/react";
 
 import Gallery from "../gallery";
 
+afterEach(cleanup);
+
 const mockImagesArray = [
   {
     childImageSharp: {

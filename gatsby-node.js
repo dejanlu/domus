@@ -17,26 +17,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `)
+  `);
 
   if (result.errors) {
-    reporter.panic("failed to create posts", result.errors)
+    reporter.panic("failed to create posts", result.errors);
   }
 
-  const posts = result.data.allMdx.nodes
+  const posts = result.data.allMdx.nodes;
 
   // we do not return anything, we create side effect in array
-  posts.forEach(post => {
+  posts.forEach((post) => {
     actions.createPage({
       path: post.frontmatter.slug,
       component: require.resolve(
-        post.frontmatter.slug.includes("object")
-          ? "./src/templates/object.js"
-          : "./src/templates/page.js"
+        post.frontmatter.slug.includes("blog-")
+          ? "./src/templates/posts.js"
+          : "./src/templates/objekti.js"
       ),
       context: {
         slug: post.frontmatter.slug,
       },
-    })
-  })
-}
+    });
+  });
+};

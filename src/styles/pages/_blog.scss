@@ -1,0 +1,95 @@
+.heroMessage--blog {
+  grid-column: col-end 5 / full-end;
+  background-color: $color-secondary;
+
+  padding: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.postPreview {
+  height: 40rem;
+
+  background-size: cover;
+
+  background-color: #fff;
+
+  &__content {
+    height: 70%;
+    background: linear-gradient(
+      to bottom right,
+      rgba($color-secondary, 0.9),
+      rgba(darken($color-secondary, 10%), 1)
+    );
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 3rem;
+
+    & h3 {
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+
+    & p {
+      line-height: 1.4;
+      text-align: justify;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 63.5%;
+    right: 3rem;
+
+    height: 5.5rem;
+    width: 5.1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    background-color: #fff;
+
+    z-index: 2;
+
+    & svg {
+      margin-left: 1px;
+      width: 5rem;
+      height: 5rem;
+      fill: $color-secondary;
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 100%;
+    overflow: hidden;
+
+    margin-top: -6.5rem;
+
+    position: relative;
+    z-index: 2;
+    border: 5px solid #fff;
+  }
+
+  & h4 {
+    margin-top: 1.5rem;
+  }
+}

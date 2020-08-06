@@ -45,7 +45,8 @@ const IndexPage = () => (
         <Message
           key={message.ime}
           author={message.ime}
-          message={message.text}
+          text={message.text}
+          quotes={true}
         />
       ))}
     </Slider>

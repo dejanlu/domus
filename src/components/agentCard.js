@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 
+import ContactData from "./contactData";
 import Button from "./button";
 
 const imageVariants = {
@@ -91,6 +92,7 @@ const AgentCard = ({ ime, email, tel, image }) => {
       >
         <Img Tag="div" fluid={image.childImageSharp.fluid} alt={ime} />
       </motion.header>
+
       <motion.p
         variants={nameVariants}
         animate={isOpen ? "onOpen" : "onClose"}
@@ -99,21 +101,16 @@ const AgentCard = ({ ime, email, tel, image }) => {
       >
         {ime}
       </motion.p>
+
       <motion.div
         variants={contactVariants}
         animate={isOpen ? "shown" : "hidden"}
         initial="hidden"
         className="agentCard__content"
       >
-        <p className="paragraph agentCard__phone">
-          <RiPhoneLine />
-          <span>{tel}</span>
-        </p>
-        <p className="paragraph agentCard__email">
-          <RiMailLine />
-          <span>{email}</span>
-        </p>
+        <ContactData tel={tel} email={email} />
       </motion.div>
+
       <div className="agentCard__button">
         <Button
           classesArray={["tertiary"]}

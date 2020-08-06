@@ -4,10 +4,9 @@ import Layout from "../containers/layout";
 import SEO from "../containers/seo";
 
 import Hero from "../components/hero";
-import HeroMessage from "../components/heroMessage";
+import Message from "../components/message";
 
 import content from "../content";
-import { element } from "prop-types";
 
 const data = content.getContent("legal");
 
@@ -24,10 +23,13 @@ const Legal = () => {
       <SEO title="Ponuda objekata" />
 
       <Hero imageName="legal" className="hero--about" />
-      <HeroMessage
-        naslov={data.heroMessage.naslov}
-        text={data.heroMessage.text}
-      />
+      <div className="heroMessage--legal">
+        <Message
+          naslov={data.heroMessage.naslov}
+          text={data.heroMessage.text}
+        />
+      </div>
+
       <section className="legal">
         <h3 className="heading--quaternary">{data.opsteOdredbe.naslov}</h3>
         <p className="paragraph">{data.opsteOdredbe.content}</p>

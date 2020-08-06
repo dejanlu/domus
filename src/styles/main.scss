@@ -15,8 +15,10 @@
 @import "./pages/index";
 @import "./pages/about";
 @import "./pages/offer";
+@import "./pages/home";
 @import "./pages/legal";
 @import "./pages/blog";
+@import "./pages/post";
 @import "./pages/404";
 
 // components
@@ -29,3 +31,4 @@
 @import "./components/hero";
 @import "./components/cardsSectionWrapper";
 @import "./components/agentCard";
+@import "./components/contactData";

@@ -4,7 +4,7 @@ import Layout from "../containers/layout";
 import SEO from "../containers/seo";
 
 import Hero from "../components/hero";
-import HeroMessage from "../components/heroMessage";
+import Message from "../components/message";
 
 import content from "../content";
 
@@ -16,10 +16,12 @@ const Offer = () => {
       <SEO title="Ponuda objekata" />
 
       <Hero imageName="offer" className="hero--about" />
-      <HeroMessage
-        naslov={data.heroMessage.naslov}
-        text={data.heroMessage.text}
-      />
+      <div className="heroMessage--about">
+        <Message
+          naslov={data.heroMessage.naslov}
+          text={data.heroMessage.text}
+        />
+      </div>
     </Layout>
   );
 };

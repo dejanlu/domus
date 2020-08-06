@@ -1,3 +1,14 @@
+.heroMessage--legal {
+  grid-column: col-end 5 / full-end;
+  background-color: $color-secondary;
+
+  padding: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .legal {
   grid-column: center-start / center-end;
 
