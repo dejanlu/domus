@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { joinHomesData } from "../helpers";
-import useHomesFilters from "./useHomesFilters";
 
 import content from "../content";
 
@@ -25,17 +23,7 @@ const useHomeRecommendedCards = () => {
 
   const homes = content.getContent("objekti");
 
-  const joinedData = joinHomesData(homes, images);
-
-  const [filteredHomes, setFilters] = useHomesFilters(joinedData);
-
-  useEffect(() => setFilters({ preporuka: true }), []);
-
-  // limit recommended homes to last 3
-  if (filteredHomes.length > 3)
-    filteredHomes.slice(filteredHomes.length - 3, filteredHomes.length);
-
-  return filteredHomes;
+  return joinHomesData(homes, images);
 };
 
 export default useHomeRecommendedCards;

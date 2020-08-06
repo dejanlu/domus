@@ -29,7 +29,7 @@
 .container--offer {
   display: grid;
 
-  grid-template-rows: 60vh repeat(2, min-content);
+  grid-template-rows: 60vh repeat(3, min-content);
   grid-template-columns:
     [header-start] 8rem [header-end full-start] 1fr [center-start] repeat(
       8,

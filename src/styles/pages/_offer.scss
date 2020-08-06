@@ -1,0 +1,70 @@
+.offerFilters {
+  grid-column: center-start / center-end;
+
+  padding-top: 15rem;
+
+  &__heading {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    width: 12rem;
+
+    cursor: pointer;
+
+    & h4 {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-top: 1px;
+    }
+
+    & span {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    & svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+.filters {
+  &__category {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+
+    font-size: 1.5rem;
+
+    & svg {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+    }
+
+    & h4 {
+      width: 12rem;
+    }
+
+    & p {
+      width: 14rem;
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+
+    & label {
+      margin-left: 0.5rem;
+      padding-bottom: 1px;
+    }
+  }
+
+  &__rangeWrapper {
+    flex: 1;
+  }
+}

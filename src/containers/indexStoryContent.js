@@ -18,7 +18,7 @@ const IndexStoryContent = () => {
       <Button
         classesArray={["primary"]}
         handleClick={() => {
-          navigate("/ponuda");
+          navigate("/offer");
         }}
       >
         Pronađi svoj dom
