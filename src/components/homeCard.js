@@ -53,7 +53,7 @@ const HomeCard = ({ id, godina, kvadratura, sobe, cijena, images, naslov }) => (
       <Button
         classesArray={["secondary"]}
         handleClick={() => {
-          navigate(`/${id}`);
+          navigate(`/obj-${id}`);
         }}
       >
         doznaj više

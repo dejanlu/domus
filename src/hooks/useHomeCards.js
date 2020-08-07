@@ -4,7 +4,7 @@ import { joinHomesData } from "../helpers";
 
 import content from "../content";
 
-const useHomeRecommendedCards = () => {
+const useHomeCards = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { relativePath: { regex: "/^ob-*/" } }) {
@@ -26,4 +26,4 @@ const useHomeRecommendedCards = () => {
   return joinHomesData(homes, images);
 };
 
-export default useHomeRecommendedCards;
+export default useHomeCards;

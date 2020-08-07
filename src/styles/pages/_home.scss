@@ -1,10 +1,42 @@
-.heroMessage--post {
+.heroMessage--home {
   grid-column: col-end 5 / full-end;
   background-color: $color-secondary;
 
-  padding: 5rem;
+  padding: 5rem 10rem;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  & div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    margin: 1rem 0;
+  }
+
+  & svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+.homeArticle {
+  padding: 15rem 0;
+  grid-column: center-start / center-end;
+
+  font-size: 1.5rem;
+  font-family: $font-primary;
+
+  & article {
+    margin-top: 15rem;
+  }
+}
+
+.homeGallery {
+  margin-bottom: 15rem;
+  grid-column: center-start / center-end;
 }

@@ -32,7 +32,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve(
         post.frontmatter.slug.includes("blog-")
           ? "./src/templates/posts.js"
-          : "./src/templates/objekti.js"
+          : "./src/templates/home.js"
       ),
       context: {
         slug: post.frontmatter.slug,
