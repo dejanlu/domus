@@ -27,7 +27,7 @@ const BackgroundOverlay = ({ isOpen, setOpen }) => {
     };
     document.body.addEventListener("click", onBodyClick);
 
-    return () => document.removeEventListener("click", onBodyClick);
+    return () => document.body.removeEventListener("click", onBodyClick);
   }, []);
 
   useLockBodyScroll();

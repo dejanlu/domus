@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "gatsby-image";
 
 import Layout from "../containers/layout";
 import SEO from "../containers/seo";
@@ -7,11 +8,13 @@ import Hero from "../components/hero";
 import IndexStoryPictures from "../containers/indexStoryPictures";
 import IndexStoryContent from "../containers/indexStoryContent";
 import IndexGallery from "../containers/indexGallery";
+import IndexFeatures from "../containers/indexFeatures";
 
 import CardsSectionWrapper from "../components/cardsSectionWrapper";
 import CardWrapper from "../components/cardWrapper";
 import HomeCard from "../components/homeCard";
 import useHomeRecommendedCards from "../hooks/useHomeRecommendedCards";
+import useOwnerPhoto from "../hooks/useOwnerPhoto";
 
 // slider
 import Slider from "../components/slider";
@@ -19,6 +22,7 @@ import content from "../content";
 import Message from "../components/message";
 
 const data = content.getContent("poruke");
+const porukaVlasnika = content.getContent("porukaVlasnika");
 
 const sliderConfig = {
   arrows: false,
@@ -51,10 +55,23 @@ const IndexPage = () => (
       ))}
     </Slider>
 
+    <section className="ownerMessage">
+      <div className="ownerMessage__content">
+        <Message
+          text={porukaVlasnika.text}
+          author={`${porukaVlasnika.ime}, vlasnik`}
+          color="heading--color-secondary"
+        />
+      </div>
+      <div className="ownerMessage__photo">
+        <Img Tag="figure" fluid={useOwnerPhoto()} />
+      </div>
+    </section>
+
     <IndexStoryPictures />
     <IndexStoryContent />
 
-    <IndexGallery />
+    <IndexFeatures />
 
     <CardsSectionWrapper>
       {useHomeRecommendedCards().map((home) => (
@@ -63,6 +80,8 @@ const IndexPage = () => (
         </CardWrapper>
       ))}
     </CardsSectionWrapper>
+
+    <IndexGallery />
   </Layout>
 );
 

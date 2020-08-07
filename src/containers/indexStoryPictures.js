@@ -12,18 +12,6 @@ export const PureIndexStoryPictures = ({ images }) => (
       objectFit="fill"
       objectPosition="50% 50%"
     />
-
-    <Image
-      fluid={getImageBasedOnName("family", images)}
-      className="story__image-family"
-      objectFit="cover"
-    />
-
-    <Image
-      fluid={getImageBasedOnName("indoor", images)}
-      className="story__image-indoor"
-      objectFit="cover"
-    />
   </section>
 );
 

@@ -1,7 +1,7 @@
 .container--index {
   display: grid;
 
-  grid-template-rows: 80vh 40vw repeat(3, min-content);
+  grid-template-rows: 80vh min-content 40vw repeat(4, min-content);
   grid-template-columns:
     [header-start] 8rem [header-end full-start] 1fr [center-start] repeat(
       8,
