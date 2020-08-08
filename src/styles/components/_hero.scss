@@ -20,42 +20,9 @@
 
     display: flex;
     align-items: flex-end;
-  }
-}
 
-.message {
-  position: relative;
-
-  padding: 1rem;
-
-  h3 {
-    margin-bottom: 3rem;
-  }
-
-  p {
-    position: relative;
-    z-index: 2;
-  }
-
-  &__quotes {
-    font-size: 40rem;
-    position: absolute;
-    color: darken($color-secondary, 10);
-
-    z-index: 1;
-
-    &--open {
-      top: -17rem;
-      left: -1rem;
+    @include respond(S) {
+      padding: 1rem 1rem 1rem 3rem;
     }
-
-    &--close {
-      top: -4rem;
-      right: 0;
-    }
-  }
-
-  &__author {
-    margin-top: 1.5rem;
   }
 }

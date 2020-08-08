@@ -1,19 +1,47 @@
 .hero--index {
-  grid-column: full-start / col-end 6;
+  grid-column: full-start / col-end 5;
+
+  @include respond(XL) {
+    grid-column: full-start / col-end 5;
+  }
+
+  @include respond(L) {
+    grid-column: full-start / col-end 4;
+  }
+
+  @include respond(M) {
+    grid-column: full-start / full-end;
+  }
 }
 
 .hero-messages {
   background-color: $color-secondary;
-  grid-column: col-end 6 / full-end;
-  padding: 5rem;
+  grid-column: col-end 5 / full-end;
+  padding: 5rem 5rem;
 
-  display: grid;
+  position: relative;
+
+  overflow: visible;
+
+  display: flex;
   justify-content: center;
   align-items: center;
 
   & .slick-slider {
-    overflow: show;
     width: 22vw;
+
+    @include respond(L) {
+      width: 30vw;
+    }
+
+    @include respond(M) {
+      padding: 5rem 0;
+      width: 32rem;
+    }
+
+    @include respond(S) {
+      width: 26rem;
+    }
   }
 
   & .slick-dots li button::before {
@@ -23,25 +51,95 @@
   & .slick-dots li.slick-active button::before {
     color: #fff;
   }
+
+  @include respond(XL) {
+    grid-column: col-end 5 / full-end;
+  }
+
+  @include respond(L) {
+    grid-column: col-end 4 / full-end;
+    padding: 5rem 2rem;
+  }
+
+  @include respond(M) {
+    grid-column: full-start / full-end;
+    padding: 2rem 0;
+  }
+
+  @include respond(S) {
+    padding: 1rem 1rem 3rem 1rem;
+  }
 }
 
 .ownerMessage {
   grid-column: center-start / center-end;
 
-  padding-top: 15rem;
+  padding: 0 5rem;
 
   display: flex;
+  align-items: center;
   overflow: hidden;
+
+  position: relative;
+
+  @include respond(L) {
+    padding: 5rem;
+  }
+
+  @include respond(M) {
+    padding: 0 3rem;
+    flex-direction: column;
+  }
+
+  @include respond(S) {
+    justify-content: flex-start;
+    padding: 0 1rem;
+    padding-top: 3rem;
+  }
 
   &__content {
     height: 100%;
     width: 50%;
     color: $color-dark;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(L) {
+      width: 55%;
+    }
+
+    @include respond(M) {
+      width: 100%;
+      height: 30rem;
+
+      align-items: flex-end;
+    }
+
+    @include respond(M) {
+      height: 25rem;
+    }
+
+    @include respond(S) {
+      width: 100%;
+      height: 20rem;
+    }
   }
   &__photo {
-    height: 100%;
-    width: 50%;
-    padding: 0 5rem;
+    height: auto;
+    position: absolute;
+    width: 30%;
+    right: 5%;
+    bottom: 0;
+
+    @include respond(M) {
+      width: 45%;
+    }
+
+    @include respond(S) {
+      width: 60%;
+    }
   }
 }
 
@@ -56,6 +154,18 @@
   grid-gap: 6rem;
 
   border-bottom: 1px solid $color-secondary;
+
+  @include respond(L) {
+    padding: 5rem;
+  }
+
+  @include respond(M) {
+    padding: 5rem 3rem;
+  }
+
+  @include respond(S) {
+    padding: 3rem 1rem;
+  }
 }
 
 .story {
@@ -69,26 +179,8 @@
       width: 100%;
     }
 
-    & .story__image-family {
-      height: 50%;
-      width: 65%;
-
-      position: absolute !important;
-      top: 8%;
-      left: 10%;
-
-      border: solid $color-primary-dark 1rem;
-    }
-
-    & .story__image-indoor {
-      height: 50%;
-      width: 65%;
-
-      position: absolute !important;
-      top: 43%;
-      left: 42%;
-
-      border: solid $color-primary 1rem;
+    @include respond(L) {
+      grid-column: full-start / full-end;
     }
   }
 
@@ -102,23 +194,49 @@
     align-items: flex-start;
 
     padding: 6rem 8vw;
+
+    @include respond(L) {
+      grid-column: full-start / full-end;
+    }
+
+    @include respond(S) {
+      width: 100%;
+      padding: 5rem 3rem;
+    }
+
+    @include respond(S) {
+      width: 100%;
+      padding: 3rem 1rem;
+    }
   }
 }
 
-.homes {
-  background-color: $color-light;
-  grid-column: center-start / center-end;
+// .homes {
+//   background-color: $color-light;
+//   grid-column: center-start / center-end;
 
-  margin: 15rem 5rem;
+//   margin: 15rem 5rem;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 6rem;
-}
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+//   grid-gap: 6rem;
+// }
 
 .gallery-section {
   grid-column: full-start / full-end;
 
-  padding: 15rem 2rem;
+  padding: 15rem 5rem;
   background-color: #fff;
+
+  @include respond(L) {
+    padding: 5rem;
+  }
+
+  @include respond(M) {
+    padding: 5rem 3rem;
+  }
+
+  @include respond(S) {
+    padding: 3rem 1rem;
+  }
 }

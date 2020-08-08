@@ -11,6 +11,7 @@ import {
 } from "react-icons/ri";
 
 import NavigationItem from "../components/navigationItem";
+import useWindowSize from "../hooks/useWindowSize";
 
 const navigationVariants = {
   onOpen: {
@@ -21,6 +22,21 @@ const navigationVariants = {
   },
   onClose: {
     width: 80,
+    transition: {
+      duration: 0.4,
+    },
+  },
+};
+
+const navigationVariantsWithSmallerSidebar = {
+  onOpen: {
+    width: 320,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  onClose: {
+    width: 40,
     transition: {
       duration: 0.4,
     },
@@ -43,11 +59,16 @@ const menuButtonVariants = {
 };
 
 const Navigation = ({ isOpen, setOpen }) => {
+  const { width } = useWindowSize();
   return (
     <div data-testid="navigation">
       <motion.nav
         className={`navigation`}
-        variants={navigationVariants}
+        variants={
+          width < 900
+            ? navigationVariantsWithSmallerSidebar
+            : navigationVariants
+        }
         animate={isOpen ? "onOpen" : "onClose"}
       >
         <motion.figure

@@ -4,8 +4,6 @@ import PropTypes from "prop-types";
 
 import { motion } from "framer-motion";
 
-import { RiPhoneLine, RiMailLine } from "react-icons/ri";
-
 import ContactData from "./contactData";
 import Button from "./button";
 

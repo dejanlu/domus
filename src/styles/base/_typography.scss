@@ -8,6 +8,10 @@
   font-family: $font-display;
   font-size: 3.2rem;
   font-style: italic;
+
+  @include respond(S) {
+    font-size: 2.5rem;
+  }
 }
 
 .heading--tertiary {
@@ -15,16 +19,28 @@
   font-style: italic;
 
   line-height: 1.2;
+
+  @include respond(S) {
+    font-size: 2.5rem;
+  }
 }
 
 .heading--quaternary {
   font-size: 1.7rem;
+
+  @include respond(S) {
+    font-size: 1.5rem;
+  }
 }
 
 .paragraph {
   font-family: $font-primary;
   font-size: 1.5rem;
   color: $color-grey-dark-1;
+
+  @include respond(S) {
+    font-size: 1.3rem;
+  }
 }
 
 .paragraph--color-primary {

@@ -1,29 +1,16 @@
 .message {
   position: relative;
-
-  padding: 1rem;
+  width: 100%;
 
   p {
     position: relative;
-    z-index: 2;
+    width: 100%;
+    height: 100%;
   }
 
-  &__quotes {
-    font-size: 40rem;
-    position: absolute;
-    color: darken($color-secondary, 10);
-
-    z-index: 1;
-
-    &--open {
-      top: -17rem;
-      left: -1rem;
-    }
-
-    &--close {
-      top: -4rem;
-      right: 0;
-    }
+  &__text {
+    position: relative;
+    z-index: 2;
   }
 
   &__author {

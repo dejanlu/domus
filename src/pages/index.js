@@ -50,7 +50,7 @@ const IndexPage = () => (
           key={message.ime}
           author={message.ime}
           text={message.text}
-          quotes={true}
+          quotes={false}
         />
       ))}
     </Slider>

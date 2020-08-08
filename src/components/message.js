@@ -19,13 +19,15 @@ const Message = ({
         {naslov}
       </h3>
     )}
-    {quotes && <span className="message__quotes message__quotes--open">“</span>}
     <p className={`paragraph ${color === "light" ? "heading--light" : color}`}>
-      {text}
+      {quotes && (
+        <span className="message__quotes message__quotes--open">“</span>
+      )}
+      {quotes && (
+        <span className="message__quotes message__quotes--close">”</span>
+      )}
+      <span className="message__text">{text}</span>
     </p>
-    {quotes && (
-      <span className="message__quotes message__quotes--close">”</span>
-    )}
     {author && (
       <p
         className={`paragraph message__author ${

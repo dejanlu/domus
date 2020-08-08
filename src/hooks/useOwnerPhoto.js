@@ -17,7 +17,6 @@ const useAgentsCards = () => {
   `);
 
   const image = data.allFile.nodes;
-  console.log(image);
 
   return image[0].childImageSharp.fluid;
 };

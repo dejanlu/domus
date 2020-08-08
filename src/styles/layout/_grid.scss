@@ -1,7 +1,7 @@
 .container--index {
   display: grid;
 
-  grid-template-rows: 80vh min-content 40vw repeat(4, min-content);
+  grid-template-rows: 70vh 50rem 40vw repeat(4, min-content);
   grid-template-columns:
     [header-start] 8rem [header-end full-start] 1fr [center-start] repeat(
       8,
@@ -10,6 +10,25 @@
     [center-end] 1fr [full-end];
 
   background-color: $color-light;
+
+  @include respond(L) {
+    grid-template-columns:
+      [header-start] 4rem [header-end full-start] 1fr [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] 1fr [full-end];
+
+    grid-template-rows: 50vh 35rem 40vw 40vw repeat(4, min-content);
+  }
+
+  @include respond(M) {
+    grid-template-rows: 50vh 50vh 50rem 35rem 35rem repeat(4, min-content);
+  }
+
+  @include respond(S) {
+    grid-template-rows: 50vh 55vh 50rem 35rem repeat(5, min-content);
+  }
 }
 
 .container--about {
