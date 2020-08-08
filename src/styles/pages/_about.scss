@@ -1,6 +1,14 @@
 .hero--about {
   grid-column: full-start / col-end 5;
 
+  @include respond(XL) {
+    grid-column: full-start / col-end 4;
+  }
+
+  @include respond(M) {
+    grid-column: full-start / full-end;
+  }
+
   &__content {
     grid-column: col-end 5 / full-end;
     background-color: $color-secondary;
@@ -22,6 +30,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include respond(XL) {
+    grid-column: col-end 4 / full-end;
+  }
+
+  @include respond(M) {
+    grid-column: full-start / full-end;
+  }
 }
 
 .timeline {
