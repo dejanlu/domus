@@ -56,6 +56,9 @@ const Home = ({ data }) => {
             tel={data.mdx.frontmatter.tel.toString()}
             email={data.mdx.frontmatter.email}
           />
+          <Link to="/offer" className="post__link button button--tertiary">
+            &larr; Povratak
+          </Link>
         </article>
       </div>
       <HomeGallery images={home.images} />

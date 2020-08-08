@@ -1,7 +1,7 @@
 {
   "name": "domus",
   "private": true,
-  "description": "Domu nekretnine web site",
+  "description": "Domus nekretnine web site",
   "version": "0.1.0",
   "author": "Dejan Lukić",
   "dependencies": {
@@ -23,7 +23,6 @@
     "gatsby-transformer-sharp": "^2.5.7",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
-    "rc-slider": "^9.3.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",

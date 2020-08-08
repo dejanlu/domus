@@ -84,6 +84,7 @@
 
   @include respond(M) {
     margin: 0 auto;
+    margin-bottom: 5rem;
     width: 50rem;
   }
 
