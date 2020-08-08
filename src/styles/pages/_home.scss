@@ -22,6 +22,18 @@
     height: 2rem;
     margin-right: 2rem;
   }
+
+  @include respond(XL) {
+    grid-column: col-end 4 / full-end;
+  }
+
+  @include respond(M) {
+    grid-column: full-start / full-end;
+  }
+
+  @include respond(S) {
+    padding: 5rem;
+  }
 }
 
 .homeArticle {
@@ -33,10 +45,51 @@
 
   & article {
     margin-top: 15rem;
+
+    @include respond(L) {
+      margin-top: 5rem;
+    }
+
+    @include respond(S) {
+      margin-top: 3rem;
+    }
+  }
+
+  @include respond(L) {
+    padding: 5rem;
+  }
+
+  @include respond(M) {
+    padding: 5rem 3rem;
+  }
+
+  @include respond(S) {
+    padding: 3rem 1rem;
   }
 }
 
 .homeGallery {
+  margin: 0 auto;
   margin-bottom: 15rem;
   grid-column: center-start / center-end;
+
+  @include respond(XL) {
+    width: 70rem;
+  }
+
+  @include respond(L) {
+    margin-bottom: 5rem;
+    width: 66rem;
+  }
+
+  @include respond(M) {
+    margin: 0 auto;
+    width: 50rem;
+  }
+
+  @include respond(S) {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    width: 30rem;
+  }
 }

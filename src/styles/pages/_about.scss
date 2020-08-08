@@ -75,6 +75,10 @@
     transform: translateX(-50%);
     top: 0;
     z-index: 1;
+
+    @media (max-width: 1169px) {
+      display: none;
+    }
   }
 
   &::before {
@@ -88,6 +92,22 @@
     transform: translateX(-50%);
     bottom: 0;
     z-index: 1;
+
+    @media (max-width: 1169px) {
+      display: none;
+    }
+  }
+
+  @include respond(L) {
+    padding: 5rem;
+  }
+
+  @include respond(M) {
+    padding: 5rem 3rem;
+  }
+
+  @include respond(S) {
+    padding: 3rem 1rem;
   }
 }
 
@@ -101,6 +121,10 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 
+    @include respond(L) {
+      grid-template-rows: repeat(2, min-content);
+    }
+
     &__heading {
       grid-column: 2 / 4;
 
@@ -113,16 +137,41 @@
       &::after {
         content: "";
         position: absolute;
-        width: 4px;
+        width: 3px;
         height: 16rem;
         background-color: $color-light;
-        left: -6.4rem;
+        left: -5.8rem;
         top: 3rem;
+
+        @include respond(S) {
+          left: -2.5rem;
+        }
+      }
+
+      @include respond(L) {
+        grid-column: 2 / 7;
       }
     }
 
     &__content {
       grid-column: 5 / 7;
+
+      @include respond(L) {
+        grid-column: 2 / 7;
+        margin-top: 5rem;
+      }
+    }
+
+    @include respond(L) {
+      padding: 5rem;
+    }
+
+    @include respond(M) {
+      padding: 5rem 3rem;
+    }
+
+    @include respond(S) {
+      padding: 3rem 1rem;
     }
   }
 }

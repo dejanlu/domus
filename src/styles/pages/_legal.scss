@@ -7,6 +7,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include respond(XL) {
+    grid-column: col-end 4 / full-end;
+  }
+
+  @include respond(M) {
+    grid-column: full-start / full-end;
+  }
 }
 
 .legal {
@@ -24,5 +32,17 @@
 
   & li {
     margin-left: 1.5rem;
+  }
+
+  @include respond(L) {
+    padding: 5rem;
+  }
+
+  @include respond(M) {
+    padding: 5rem 3rem;
+  }
+
+  @include respond(S) {
+    padding: 3rem 1rem;
   }
 }
